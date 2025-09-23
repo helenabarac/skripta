@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            background-color: lightsteelblue;
+            width: 210px;
+            border-radius: 5px;
+        }
+        .objasnjenje1{
+            background-color: lightsteelblue;
+            width: 700px;
+            border-radius: 5px;
+            padding: 10px;
+        }
+        .span1{
+            color: dodgerblue;
+            font-weight: bold;
+        }
+        .objasnjenje2{
+            background-color: lightsteelblue;
+            width: 1300px;
+            border-radius: 5px;
+            padding: 10px;
+        }
+        .objasnjenje3{
+            background-color: lightsteelblue;
+            width: 920px;
+            border-radius: 5px;
+            padding: 10px;
+        }
+        .span2{
+            color: rgb(255, 131, 30);
+            font-weight: bold;
+        }
+        .objasnjenje4{
+            background-color: lightsteelblue;
+            width: 660px;
+            border-radius: 5px;
+            padding: 10px;
+        }
+        .objasnjenje5{
+            background-color: lightsteelblue;
+            width: 750px;
+            border-radius: 5px;
+            padding: 10px;
+        }
+        ul{
+            padding-left: 30px;
+        }
+        .teze{
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS box model</h1>
+
+    <h2>Block and inline boxes</h2>
+    <ul style="list-style-type: none;" class="objasnjenje1">
+      <li>- In CSS we have several types of boxes that generally fit into the categories of block boxes and inline boxes.</li>
+      <li>- The type refers to how the box behaves in terms of page flow and in relation to other boxes on the page. </li>
+    </ul>
+    <h3>If a box has a display value of block, then:</h3>
+    <ul>
+        <li>The box will break onto a new line.</li>
+        <li>The <span class="span1">width</span> and <span class="span1">height</span> properties are respected.</li>
+        <li>Padding, margin and border will cause other elements to be pushed away from the box.</li>
+        <li>If <span class="span1">width</span> is not specified, the box will extend in the inline direction to fill the space available in its container. <br>In most cases, the box will become as wide as its container, filling up 100% of the space available.</li>
+    </ul>
+    <h3>If a box has a display type of inline, then:</h3>
+    <ul>
+        <li>The box will not break onto a new line.</li>
+        <li>The <span class="span1">width</span> and <span class="span1">height</span> properties will not apply.</li>
+        <li>Top and bottom padding, margins, and borders will apply but will not cause other inline boxes to move away from the box.</li>
+        <li>Left and right padding, margins, and borders will apply and will cause other inline boxes to move away from the box.</li>
+    </ul>
+
+    <h2>What is the CSS box model?</h2>
+    <ul style="list-style-type: none;" class="objasnjenje2">
+      <li>- The CSS box model as a whole applies to block boxes and defines how the different parts of a box — margin, border, padding, and content — work together to create a box that you can see on a page.</li>
+      <li>- To add complexity, there is a standard and an alternate box model.</li>
+    </ul>
+    <h3>Parts of a box:</h3>
+    <ul>
+        <li><b><i>Content box:</i></b> The area where your content is displayed; size it using properties like <span class="span1">width</span> and <span class="span1">height</span>.</li>
+        <li><b><i>Padding box:</i></b> The padding sits around the content as white space; size it using <span class="span1">padding</span> and related properties.</li>
+        <li><b><i>Border box:</i></b> The border box wraps the content and any padding; size it using <span class="span1">border</span> and related properties.</li>
+        <li><b><i>Margin box:</i></b> The margin is the outermost layer, wrapping the content, padding, and border as whitespace between this box and other elements; size it using <span class="span1">margin</span> and related properties.</li>
+    </ul>
+    <img src="box-model.png" alt="">
+
+    <h3>The standard CSS box model</h3>
+    <ul style="list-style-type: none;" class="objasnjenje3">
+      <li>- In the standard box model, if you set <span class="span1">width</span> and <span class="span1">height</span> property values on a box, these values define the <span class="span1">width</span> and <span class="span1">height</span> of the content box. </li>
+      <li>- Any padding and borders are then added to those dimensions to get the total size taken up by the box (see the image below).</li>
+    </ul>
+    <img src="standard-box-model.png" alt="">
+
+    <h3>The alternative CSS box model</h3>
+    <ul style="list-style-type: none;" class="objasnjenje4">
+      <li>- In the alternative box model, any width is the width of the visible box on the page.</li>
+      <li>- The content area width is that width minus the width for the padding and border (see image below).</li>
+      <li>- This is convenient as there is no need to add up the border and padding to get the real size of the box.</li>
+      <li>- To turn on the alternative model for an element, set <span class="span1">box-sizing:</span> <span class="span2">border-box</span> in style.</li>
+    </ul>
+    <img src="alternate-box-model.png" alt="">
+
+    <h2>Margin collapsing</h2>
+    <p>Depending on whether two elements whose margins touch have positive or negative margins, the results will be different:</p>
+    <ul>
+        <li>Two positive margins will combine to become one margin. Its size will be equal to the largest individual margin.</li>
+        <li>Two negative margins will collapse and the smallest (furthest from zero) value will be used.</li>
+        <li>If one margin is negative, its value will be subtracted from the total.</li>
+    </ul>
+
+    <h2>Using display: inline-block</h2>
+    <ul style="list-style-type: none;" class="objasnjenje5">
+        <li>- <span class="span1">display:</span> <span class="span2">inline-block</span> is a special value of <span class="span1">display</span>, which provides a middle ground between <span class="span2">inline</span> and <span class="span2">block</span>.</li>
+    </ul>
+    <p>An element with <span class="span1">display:</span> <span class="span2">inline-block</span> does a subset of the block things we already know about:</p>
+    <ul>
+        <li>The <span class="span1">width</span> and <span class="span1">height</span> properties are respected.</li>
+        <li><span class="span1">Padding</span>, <span class="span1">margin</span>, and <span class="span1">border</span> will cause other elements to be pushed away from the box.</li>
+        <li>It does not, however, break onto a new line, and will only become larger than its content if you explicitly add <span class="span1">width</span> and <span class="span1">height</span> properties.</li>
+    </ul>
+</body>
+</html>
