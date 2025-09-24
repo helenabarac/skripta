@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <title>Bilješke s predavanja</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Naslov -->
+        <h1>📑 Bilješke s predavanja</h1>
+
+        <!-- Kartica 1. lekcije -->
+        <div class="card">
+            <div class="card-header">
+                <h2>🎯 HTML Styles - CSS</h2>
+                <p>Lekcija 1 • 17. rujan 2025. </p>
+            </div>
+
+         <h2>Što je CSS?</h2>
+            <ul style="list-style-type: none;" class="objasnjenje">
+             <li>- Cascading Style Sheets (CSS) se koristi za formatiranje izgleda web stranice.</li>
+             <li>- Pomoću CSS-a možete kontrolirati boju, font, veličinu teksta, razmak između elemenata, kako su elementi pozicionirani i raspoređeni, koje će se pozadinske slike ili boje pozadine koristiti, različite prikaze za različite uređaje i veličine zaslona i još mnogo toga!</li>
+            </ul>
+         <h3>CSS se može dodati u HTML dokumente na 3 načina:</h3>
+           <ul>
+             <li><b><i>Inline</i></b> - korištenjem <span class="span1">style</span> atributa unutar HTML elemenata</li>
+             <li><b><i>Internal</i></b> -  korištenjem <span class="span1">style</span> elementa u <span class="span1">head</span> odjeljku</li>
+             <li><b><i>External</i></b> - korištenjem <span class="span1">link</span> elementa za povezivanje s vanjskom CSS datotekom</li>
+           </ul>
+
+         <h2>CSS boje, fontovi i veličine</h2>
+           <ul style="list-style-type: none;" class="teze">
+             <li>- CSS <span class="span2">color</span> svojstvo definira boju teksta koja će se koristiti.</li>
+             <li>- CSS <span class="span2">font-family</span> svojstvo definira font koji će se koristiti.</li>
+             <li>- CSS <span class="span2">font-size</span> svojstvo definira veličinu teksta koja će se koristiti.</li>
+           </ul>
+
+         <h2>CSS obrub</h2>
+           <ul style="list-style-type: none;" class="teze"> <li>- CSS <span class="span2">border</span> svojstvo definira okvir oko HTML elementa.</li> </ul>
+         <h2>CSS ispuna</h2>
+           <ul style="list-style-type: none;" class="teze"> <li>- CSS <span class="span2">padding</span> svojstvo definira padding (razmak) između teksta i obruba.</li> </ul>
+         <h2>CSS margina</h2>
+           <ul style="list-style-type: none;" class="teze"> <li>- CSS <span class="span2">margin</span> svojstvo definira marginu (razmak) izvan obruba.</li> </ul>
+
+         <h2>Veza na vanjski CSS</h2>
+           <ul style="list-style-type: none;" class="objasnjenje"> <li>- Vanjski stilski listovi mogu se referencirati s punim URL-om ili s putanjom relativnom u odnosu na trenutnu web stranicu.</li> </ul>
+           <ul>
+             <li><b>Ovaj primjer koristi puni URL za povezivanje sa stilskim listom:</b><br> >link rel="stylesheet" href="https://www.w3schools.com/html/styles.css"<</li>
+             <li><b>Ovaj primjer povezuje na stilski list koji se nalazi u html mapi na trenutnoj web stranici:</b><br> >link rel="stylesheet" href="/html/styles.css"<</li>
+             <li><b>This example links to a style sheet located in the same folder as the current page:</b><br> >link rel="stylesheet" href="styles.css"<</li>
+           </ul>
+        </div>
+    </div>
+        <!-- Kartica 2. lekcije -->
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+                <h2>🎯 CSS box model</h2>
+                <p>Lekcija 2 • 22. rujan 2025. </p>
+            </div>
+            <h2>Block and inline boxes</h2>
+                <ul style="list-style-type: none;" class="objasnjenje">
+                    <li>- In CSS we have several types of boxes that generally fit into the categories of block boxes and inline boxes.</li>
+                    <li>- The type refers to how the box behaves in terms of page flow and in relation to other boxes on the page. </li>
+                </ul>
+            <h3>If a box has a display value of block, then:</h3>
+                <ul>
+                    <li>The box will break onto a new line.</li>
+                    <li>The <span class="span2">width</span> and <span class="span2">height</span> properties are respected.</li>
+                    <li>Padding, margin and border will cause other elements to be pushed away from the box.</li>
+                    <li>If <span class="span2">width</span> is not specified, the box will extend in the inline direction to fill the space available in its container. <br>In most cases, the box will become as wide as its container, filling up 100% of the space available.</li>
+                </ul>
+            <h3>If a box has a display type of inline, then:</h3>
+                <ul>
+                    <li>The box will not break onto a new line.</li>
+                    <li>The <span class="span2">width</span> and <span class="span2">height</span> properties will not apply.</li>
+                    <li>Top and bottom padding, margins, and borders will apply but will not cause other inline boxes to move away from the box.</li>
+                    <li>Left and right padding, margins, and borders will apply and will cause other inline boxes to move away from the box.</li>
+                </ul>
+            <h2>What is the CSS box model?</h2>
+                <ul style="list-style-type: none;" class="objasnjenje">
+                    <li>- The CSS box model as a whole applies to block boxes and defines how the different parts of a box — margin, border, padding, and content — work together to create a box that you can see on a page.</li>
+                    <li>- To add complexity, there is a standard and an alternate box model.</li>
+               </ul>
+           <h3>Parts of a box:</h3>
+                <ul>
+                    <li><b><i>Content box:</i></b> The area where your content is displayed; size it using properties like <span class="span2">width</span> and <span class="span2">height</span>.</li>
+                    <li><b><i>Padding box:</i></b> The padding sits around the content as white space; size it using <span class="span2">padding</span> and related properties.</li>
+                    <li><b><i>Border box:</i></b> The border box wraps the content and any padding; size it using <span class="span2">border</span> and related properties.</li>
+                    <li><b><i>Margin box:</i></b> The margin is the outermost layer, wrapping the content, padding, and border as whitespace between this box and other elements; size it using <span class="span2">margin</span> and related properties.</li>
+                </ul>
+            <h3>The standard CSS box model</h3>
+                <ul style="list-style-type: none;" class="objasnjenje">
+                    <li>- In the standard bopan2">height</span> property values on a box, these values define the <span class="span2">width</span> and <span class="span2">height</span> of the content box. </li>
+                    <li>- Any padding and borders are then added to those dimensions to get the total size taken up by the box.</li>
+                </ul>
+            <h3>The alternative CSS box model</h3>
+                <ul style="list-style-type: none;" class="objasnjenje">
+                    <li>- In the alternative box model, any width is the width of the visible box on the page.</li>
+                    <li>- The content area width is that width minus the width for the padding and border.</li>
+                    <li>- This is convenient as there is no need to add up the border and padding to get the real size of the box.</li>
+                    <li>- To turn on the alternative model for an element, set <span class="span2">box-sizing:</span> <span class="span3">border-box</span> in style.</li>
+                </ul>
+            <h2>Margin collapsing</h2>
+                <p>Depending on whether two elements whose margins touch have positive or negative margins, the results will be different:</p>
+                <ul>
+                    <li>Two positive margins will combine to become one margin. Its size will be equal to the largest individual margin.</li>
+                    <li>Two negative margins will collapse and the smallest (furthest from zero) value will be used.</li>
+                    <li>If one margin is negative, its value will be subtracted from the total.</li>
+                </ul>
+            <h2>Using display: inline-block</h2>
+                <ul style="list-style-type: none;" class="objasnjenje">
+                    <li>- <span class="span2">display:</span> <span class="span3">inline-block</span> is a special value of <span class="span2">display</span>, which provides a middle ground between <span class="span3">inline</span> and <span class="span3">block</span>.</li>
+                </ul>
+            <p>An element with <span class="span2">display:</span> <span class="span3">inline-block</span> does a subset of the block things we already know about:</p>
+                <ul>
+                    <li>The <span class="span2">width</span> and <span class="span2">height</span> properties are respected.</li>
+                    <li><span class="span2">Padding</span>, <span class="span2">margin</span>, and <span class="span2">border</span> will cause other elements to be pushed away from the box.</li>
+                    <li>It does not, however, break onto a new line, and will only become larger than its content if you explicitly add <span class="span2">width</span> and <span class="span2">height</span> properties.</li>
+                </ul>
+        </div>
+    </div>
+</body>
+</html>
